@@ -1,57 +1,44 @@
-.blog-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+/* blog previews / list */
 
-  ul {
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .blog-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3em;
-    list-style-type: none;
+    width: 100%;
 
-    li {
-      flex: 0 1 calc((100% - 9em) / 4);
-      display: flex;
-      flex-direction: column;
-
-      padding: 2em 3em;
-      background-color: $blog-bg;
-      margin-bottom: 20px;
+    .blog-preview {
+      padding: 10px 16px;
+      margin: 20px 0;
+      width: 80%;
+      &:hover {
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+      }
 
       h2 {
         font-size: 20px;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
+        color: $blog-title-color;
+        margin-bottom: 8px;
       }
 
-      p {
-        font-size: 16px;
-        font-weight: 500;
-      }
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+      button {
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid $button-color;
+        padding: 0.5em 1em;
+        color: $button-color;
+        transition: all 0.3s ease-in-out;
 
-        button {
-          border: 1px solid $button-color;
+        &:hover {
           background-color: $button-color;
-          margin-top: 2em;
-          padding: 1em 2em;
-          color: $button-text-color;
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            background-color: $blog-bg;
-            color: $button-color;
-          }
+          color: white;
         }
       }
     }
