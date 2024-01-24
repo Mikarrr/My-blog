@@ -1,0 +1,16 @@
+npx create-react-app .
+npm install sass
+npm install react-router react-router-dom
+
+App.js - zaimportować
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+
+Navigation.js - zaimportować
+
+import { Link } from "react-router-dom";
