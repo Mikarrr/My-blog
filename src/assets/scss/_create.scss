@@ -1,0 +1,44 @@
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 30%;
+
+    label {
+      color: $text-color;
+      text-align: left;
+      display: block;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 6px 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 40%;
+      background: $button-color;
+      color: #fff;
+      border: 0;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: center;
+    }
+  }
+}

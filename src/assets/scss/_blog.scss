@@ -57,4 +57,33 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+
+    h2,
+    p {
+      color: $text-color;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: $blog-title-color;
+      margin: 0;
+    }
+    p {
+      font-size: 14px;
+    }
+    div {
+      margin-top: 20px;
+      margin-bottom: 100px;
+      color: $text-color;
+      font-size: 15px;
+      text-align: justify;
+    }
+  }
 }
