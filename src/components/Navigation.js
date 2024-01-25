@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   {
-    title: "Home",
-    path: "/",
-  },
-  {
     title: "Blog",
     path: "/blog",
+  },
+  {
+    title: "Create New",
+    path: "/create",
   },
 ];
 

@@ -6,8 +6,10 @@ import {
 } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import NotFound from "./components/NotFound";
-import Home from "./pages/Home";
+
 import Blog from "./pages/Blog";
+import Create from "./pages/Create";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
   return (
@@ -15,9 +17,10 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/" element={<Blog />} />
+          <Route path="/blog" element={<Navigate to="/" />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

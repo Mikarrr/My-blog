@@ -21,11 +21,18 @@
       &:hover {
         box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
       }
+      a {
+        text-decoration: none;
 
-      h2 {
-        font-size: 20px;
-        color: $blog-title-color;
-        margin-bottom: 8px;
+        h2 {
+          font-size: 20px;
+          color: $blog-title-color;
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: $text-color;
+        }
       }
 
       button {
@@ -43,4 +50,11 @@
       }
     }
   }
+}
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
