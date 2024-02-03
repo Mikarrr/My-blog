@@ -20,6 +20,7 @@ function App() {
           <Route path="/" element={<Blog />} />
           <Route path="/blog" element={<Navigate to="/" />} />
           <Route path="/create" element={<Create />} />
+
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

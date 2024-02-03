@@ -85,17 +85,23 @@
       font-size: 15px;
       text-align: justify;
     }
-    button {
+    .buttons {
       margin-top: 20px;
-      width: 40%;
-      background: $button-color;
-      color: #fff;
-      border: 0;
-      padding: 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      align-self: center;
       margin-bottom: 100px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      button {
+        width: 100%;
+        min-width: 100px;
+        background: $button-color;
+        color: #fff;
+        border: 0;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        align-self: center;
+      }
     }
   }
 }
