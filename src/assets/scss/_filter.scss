@@ -1,0 +1,31 @@
+.blog-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    height: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      padding-bottom: 5px;
+      padding: 5px;
+      font-size: 18px;
+      color: $text-color;
+      border-bottom: 0px solid $text-link;
+
+      &:hover {
+        color: $text-link;
+        border-bottom: 2px solid $text-link;
+      }
+    }
+  }
+}

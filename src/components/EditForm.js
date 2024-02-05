@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 const EditForm = ({ initialData, onSubmit }) => {
   const [title, setTitle] = useState(initialData.title);
   const [body, setBody] = useState(initialData.body);
+  const [category, setCategory] = useState(initialData.category);
   const [author, setAuthor] = useState(initialData.author);
   const [isPending, setIsPending] = useState(false);
   const history = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updatedBlog = { title, body, author };
+    const updatedBlog = { title, body, category, author };
 
     setIsPending(true);
 
@@ -48,6 +49,11 @@ const EditForm = ({ initialData, onSubmit }) => {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
+        <label>Blog category:</label>
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="Live">Live</option>
+          <option value="Party">Party</option>
+        </select>
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
           <option value="mario">mario</option>

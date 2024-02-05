@@ -43,6 +43,7 @@ const BlogDetails = () => {
       {data && (
         <article>
           <h2>{data.title}</h2>
+          <p>Category: {data.category}</p>
           <p>Autor: {data.author}</p>
           <div>{data.body}</div>
           <div className="buttons">
