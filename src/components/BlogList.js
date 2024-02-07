@@ -14,19 +14,32 @@ const BlogList = ({ blogs, title }) => {
     : blogs;
 
   return (
-    <div className="blog-list">
-      <h2>{title}</h2>
-      <Filter onFilterChange={handleFilterChange} />
-      {filteredBlogs.map((blog) => (
-        <div className="blog-preview" key={blog.id}>
-          <Link to={`/blogs/${blog.id}`}>
-            <h2>{blog.title}</h2>
-            <p>Category: {blog.category}</p>
-            <p>Written by {blog.author}</p>
-          </Link>
+    <>
+      <div className="blog-header">
+        <p>News</p>
+        <h2>Blog list</h2>
+      </div>
+
+      <div className="blog-list">
+        <Filter onFilterChange={handleFilterChange} />
+        <div className="blog-grid">
+          {filteredBlogs.map((blog) => (
+            <div className="blog-preview" key={blog.id}>
+              <Link to={`/blogs/${blog.id}`}>
+                <p className="category">{blog.category}</p>
+                <h2>{blog.title}</h2>
+                <p>
+                  {blog.body.length > 200
+                    ? blog.body.substring(0, 200) + "..."
+                    : blog.body}
+                </p>
+                <p>Written by {blog.author}</p>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </>
   );
 };
 

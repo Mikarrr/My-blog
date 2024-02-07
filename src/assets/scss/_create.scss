@@ -1,44 +1,103 @@
 .create {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  width: 100%;
 
-  form {
+  .create-header {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    width: 30%;
-
-    label {
-      color: $text-color;
-      text-align: left;
-      display: block;
+    align-items: left;
+    width: 70%;
+    p {
+      color: rgb(199, 199, 199);
+      margin: 0;
+      padding: 0.5em 0;
     }
 
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 6px 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      box-sizing: border-box;
-      display: block;
+    h2 {
+      color: white;
+      font-size: 45px;
+      margin: 0;
+      padding-bottom: 1em;
     }
+  }
+  .create-list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    button {
-      margin-top: 20px;
-      width: 40%;
-      background: $button-color;
-      color: #fff;
-      border: 0;
-      padding: 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      align-self: center;
+    width: 100%;
+    background: rgb(46, 8, 106);
+    background: linear-gradient(
+      180deg,
+      rgba(46, 8, 106, 0.15) 0%,
+      rgba(26, 4, 59, 1) 29%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    min-height: 62vh;
+    .create-form {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        padding: 55px 55px;
+        background: rgba(74, 54, 99, 0.3);
+        backdrop-filter: blur(0.625rem);
+        border-radius: 0.625rem;
+
+        label {
+          color: $text-color;
+          text-align: left;
+          display: block;
+          font-size: 20px;
+        }
+
+        input,
+        textarea,
+        select {
+          width: 100%;
+          padding: 6px 10px;
+          margin: 10px 0;
+          box-sizing: border-box;
+          display: block;
+          border: 1px solid hsla(0, 0, 0, 0);
+          background-color: hsla(46, 8, 106, 0.05);
+          border-radius: 10px;
+          padding-bottom: 5px;
+          padding: 10px 30px;
+          font-size: 18px;
+          color: white;
+        }
+        textarea {
+          min-height: 200px;
+        }
+        button {
+          margin-top: 20px;
+          width: 40%;
+          border: 1px solid white;
+          background-color: hsla(0, 0, 0, 0);
+          border-radius: 30px;
+          padding-bottom: 5px;
+          padding: 10px 30px;
+          color: #fff;
+          cursor: pointer;
+          align-self: center;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            border: 1px solid hsla(0, 0, 0, 0);
+            background-color: hsla(46, 8, 106, 0.05);
+          }
+        }
+      }
     }
   }
 }

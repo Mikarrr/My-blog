@@ -1,51 +1,106 @@
 /* blog previews / list */
 
 .blog {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 
-  .blog-list {
+  .blog-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: left;
+    width: 70%;
+    p {
+      color: rgb(199, 199, 199);
+      margin: 0;
+      padding: 0.5em 0;
+    }
+
+    h2 {
+      color: white;
+      font-size: 45px;
+      margin: 0;
+      padding-bottom: 1em;
+    }
+  }
+  .blog-list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    min-height: 60.5vh;
+    background: rgb(46, 8, 106);
+    background: linear-gradient(
+      180deg,
+      rgba(46, 8, 106, 0.15) 0%,
+      rgba(26, 4, 59, 1) 29%,
+      rgba(0, 0, 0, 1) 100%
+    );
 
-    .blog-preview {
-      padding: 10px 16px;
-      margin: 20px 0;
-      width: 80%;
-      &:hover {
-        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-      }
-      a {
-        text-decoration: none;
+    .blog-grid {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: left;
+      align-content: center;
+      gap: 30px;
+      width: 70%;
 
-        h2 {
-          font-size: 20px;
-          color: $blog-title-color;
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: $text-color;
-        }
-      }
-
-      button {
-        font-size: 14px;
-        font-weight: 600;
-        border: 1px solid $button-color;
-        padding: 0.5em 1em;
-        color: $button-color;
+      .blog-preview {
+        padding: 15px 25px;
+        background: rgba(74, 54, 99, 0.3);
+        backdrop-filter: blur(0.625rem);
+        border-radius: 0.625rem;
+        margin: 20px 0;
+        display: block;
+        max-width: 400px;
+        overflow: hidden;
+        position: relative;
         transition: all 0.3s ease-in-out;
-
         &:hover {
-          background-color: $button-color;
-          color: white;
+          background: rgba(74, 54, 99, 0.5);
+        }
+        a {
+          text-decoration: none;
+
+          .category {
+            background-color: #690afe;
+            color: white;
+            border-radius: 0.25rem;
+            color: #fff;
+            display: inline-block;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+            padding: 0.25rem 0.5rem;
+          }
+          h2 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 15px;
+            color: rgb(199, 199, 199);
+          }
+        }
+
+        button {
+          font-size: 14px;
+          font-weight: 600;
+          border: 1px solid $button-color;
+          padding: 0.5em 1em;
+          color: $button-color;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $button-color;
+            color: white;
+          }
         }
       }
     }

@@ -1,7 +1,8 @@
 .blog-filter {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  width: 70%;
 
   ul {
     height: 100%;
@@ -16,15 +17,22 @@
 
     a {
       text-decoration: none;
+      border: 1px solid white;
+      background-color: none;
+      border-radius: 30px;
       padding-bottom: 5px;
-      padding: 5px;
+      padding: 10px 30px;
       font-size: 18px;
-      color: $text-color;
-      border-bottom: 0px solid $text-link;
+      color: white;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: $text-link;
-        border-bottom: 2px solid $text-link;
+        border: 1px solid hsla(0, 0, 0, 0);
+        background-color: hsla(46, 8, 106, 0.05);
+      }
+      &:focus {
+        border: 1px solid hsla(0, 0, 0, 0);
+        background-color: hsla(46, 8, 106, 0.09);
       }
     }
   }
