@@ -1,11 +1,16 @@
 /* blog previews / list */
 
 .blog {
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(../../../photos/bg.jpg);
+  background-position: center -300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 
   .blog-header {
     display: flex;
@@ -111,41 +116,69 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 
-  article {
+  .blog-header {
+    background-image: url(../../../photos/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-
-    h2,
-    p {
-      color: $text-color;
-    }
+    justify-content: flex-end;
+    padding-bottom: 5vw;
 
     h2 {
-      font-size: 20px;
-      color: $blog-title-color;
-      margin: 0;
+      font-size: 65px;
+      max-width: 1200px;
+      color: white;
+      margin-left: 10vw;
+      margin-bottom: 2vw;
+    }
+    .category {
+      background-color: #690afe;
+      color: white;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      display: inline-block;
+      width: fit-content;
+      margin-left: 10vw;
+      margin-top: 0;
     }
     p {
       font-size: 14px;
+      color: white;
+      margin-left: 10vw;
     }
+  }
+  .blog-body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     div {
       margin-top: 20px;
       margin-bottom: 30px;
-      color: $text-color;
-      font-size: 15px;
+      color: black;
+      line-height: 1.5em;
+      font-size: 22px;
       text-align: justify;
     }
     .buttons {
       margin-top: 20px;
       margin-bottom: 100px;
+      width: 30%;
       display: flex;
       flex-direction: row;
       gap: 20px;
+
       button {
         width: 100%;
         min-width: 100px;

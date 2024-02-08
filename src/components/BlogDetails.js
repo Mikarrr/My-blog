@@ -41,16 +41,20 @@ const BlogDetails = () => {
       {isPending && <div>Ładowanie...</div>}
       {error && <div>{error}</div>}
       {data && (
-        <article>
-          <h2>{data.title}</h2>
-          <p>Category: {data.category}</p>
-          <p>Autor: {data.author}</p>
-          <div>{data.body}</div>
-          <div className="buttons">
-            <button onClick={handleClickDelete}>Usuń</button>
-            <button onClick={handleToggleEditForm}>Edytuj</button>
+        <>
+          <div className="blog-header">
+            <h2>{data.title}</h2>
+            <p className="category">{data.category}</p>
+            <p>Autor: {data.author}</p>
           </div>
-        </article>
+          <div className="blog-body">
+            <div>{data.body}</div>
+            <div className="buttons">
+              <button onClick={handleClickDelete}>Usuń</button>
+              <button onClick={handleToggleEditForm}>Edytuj</button>
+            </div>
+          </div>
+        </>
       )}
 
       {isEditFormVisible && (
