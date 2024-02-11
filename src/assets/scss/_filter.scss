@@ -4,6 +4,10 @@
   align-items: center;
   width: 70%;
 
+  @media (max-width: 1550px) {
+    width: 90%;
+  }
+
   ul {
     height: 100%;
     margin-block-start: 0;
