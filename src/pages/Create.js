@@ -5,7 +5,7 @@ const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setbody] = useState("");
   const [category, setCategory] = useState("Live");
-  const [author, setAuthor] = useState("mario");
+  const [author, setAuthor] = useState("");
   const [isPending, setIsPending] = useState(false);
   const history = useNavigate();
   const handleSubmit = (e) => {
@@ -50,14 +50,16 @@ const Create = () => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option value="Live">Live</option>
-              <option value="Play">Play</option>
+              <option value="Front-end">Front-end</option>
+              <option value="Back-end">Back-end</option>
             </select>
             <label>Blog author:</label>
-            <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-              <option value="mario">mario</option>
-              <option value="yoshi">yoshi</option>
-            </select>
+            <input
+              type="text"
+              required
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+            />
             {!isPending && <button>Add Blog</button>}
             {isPending && <button>Adding Blog...</button>}
           </form>

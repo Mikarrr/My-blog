@@ -4,11 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../../photos/bg.jpg);
-  background-position: center -250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgb(11, 7, 17) 0%,
+    rgb(19, 4, 44) 40%,
+    rgb(21, 5, 48) 50%,
+    rgb(34, 8, 68) 100%
+  );
+  min-height: 90.1vh;
 
   .create-header {
     display: flex;
@@ -34,7 +37,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 100%;
     background: rgb(46, 8, 106);
     background: linear-gradient(
@@ -43,7 +45,7 @@
       rgba(26, 4, 59, 1) 29%,
       rgba(0, 0, 0, 1) 100%
     );
-    min-height: 62vh;
+
     .create-form {
       display: flex;
       flex-direction: column;
@@ -81,6 +83,33 @@
           font-size: 18px;
           color: white;
         }
+        select {
+          appearance: none;
+        }
+
+        select::-ms-expand {
+          display: none;
+        }
+
+        select::-webkit-select {
+          appearance: none;
+        }
+
+        select::-webkit-scrollbar {
+          display: none;
+        }
+
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%);
+          background-position: calc(100% - 20px) calc(1em + 2px),
+            calc(100% - 15px) calc(1em + 2px);
+          background-size: 5px 5px, 5px 5px;
+          background-repeat: no-repeat;
+        }
+
         textarea {
           min-height: 200px;
         }

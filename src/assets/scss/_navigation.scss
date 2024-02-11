@@ -32,6 +32,7 @@ ul {
     padding: 0 20px 0 20px;
     font-size: 20px;
     color: $text-color;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: $text-link;

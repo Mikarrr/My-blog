@@ -55,10 +55,12 @@ const EditForm = ({ initialData, onSubmit }) => {
           <option value="Party">Party</option>
         </select>
         <label>Blog author:</label>
-        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="mario">mario</option>
-          <option value="yoshi">yoshi</option>
-        </select>
+        <input
+          type="text"
+          required
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
         {!isPending && <button>Edit Blog</button>}
         {isPending && <button>Updating Blog...</button>}
       </form>

@@ -6,12 +6,12 @@ const filterLinks = [
     path: "/blog",
   },
   {
-    category: "Live",
-    path: "/blogs/category/live",
+    category: "Front-end",
+    path: "/blogs/category/Front-end",
   },
   {
-    category: "Party",
-    path: "/blogs/category/party",
+    category: "Back-end",
+    path: "/blogs/category/Back-end",
   },
 ];
 

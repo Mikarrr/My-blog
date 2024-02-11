@@ -1,15 +1,20 @@
 /* blog previews / list */
-
+.load {
+  color: white;
+}
 .blog {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../../photos/bg.jpg);
-  background-position: center -300px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgb(11, 7, 17) 0%,
+    rgb(19, 4, 44) 40%,
+    rgb(21, 5, 48) 50%,
+    rgb(34, 8, 68) 100%
+  );
   min-height: 100vh;
 
   .blog-header {
