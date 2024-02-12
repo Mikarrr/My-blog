@@ -158,12 +158,34 @@
     justify-content: flex-end;
     padding-bottom: 5vw;
 
+    @media (max-width: 1550px) {
+      height: 70vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 5vw;
+    }
+
+    @media (max-width: 900px) {
+    }
+
     h2 {
       font-size: 65px;
       max-width: 1200px;
       color: white;
       margin-left: 10vw;
       margin-bottom: 2vw;
+
+      @media (max-width: 1550px) {
+        font-size: 55px;
+        margin-right: 10vw;
+      }
+
+      @media (max-width: 900px) {
+        font-size: 45px;
+        margin-right: 10vw;
+      }
     }
     .category {
       background-color: #690afe;
