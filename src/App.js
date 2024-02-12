@@ -10,6 +10,7 @@ import NotFound from "./components/NotFound";
 import Blog from "./pages/Blog";
 import Create from "./pages/Create";
 import BlogDetails from "./components/BlogDetails";
+import CreateCategory from "./pages/CreateCategory";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Blog />} />
           <Route path="/blog" element={<Navigate to="/" />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/category" element={<CreateCategory />} />
           <Route path="/blogs/category/:category" element={<Blog />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="*" element={<NotFound />} />

@@ -9,6 +9,10 @@ const navLinks = [
     title: "Create New",
     path: "/create",
   },
+  {
+    title: "Add Category",
+    path: "/category",
+  },
 ];
 
 const Navigation = () => {

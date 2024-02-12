@@ -1,8 +1,10 @@
 import BlogList from "../components/BlogList";
-import useFetch from "../components/useFetch";
+import useFetchBlog from "../components/useFetchBlog";
 
 const Home = () => {
-  const { data, isPending, error } = useFetch("http://localhost:8000/blogs");
+  const { data, isPending, error } = useFetchBlog(
+    "http://localhost:8000/blogs"
+  );
   return (
     <div className="blog">
       {error && <div className="error">{error}</div>}

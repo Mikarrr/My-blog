@@ -56,5 +56,19 @@
       "author": "restapidesigner",
       "id": "11"
     }
+  ],
+  "category": [
+    {
+      "title": "Front-end",
+      "id": "1"
+    },
+    {
+      "title": "Back-end",
+      "id": "2"
+    },
+    {
+      "title": "SEO",
+      "id": "3"
+    }
   ]
 }

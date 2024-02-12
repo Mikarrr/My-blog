@@ -1,12 +1,12 @@
 import { useParams } from "react-router";
-import useFetch from "./useFetch";
+import useFetchBlog from "./useFetchBlog";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import EditForm from "./EditForm";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data, error, isPending } = useFetch(
+  const { data, error, isPending } = useFetchBlog(
     `http://localhost:8000/blogs/${id}`
   );
   const history = useNavigate();

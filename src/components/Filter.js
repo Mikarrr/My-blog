@@ -1,31 +1,39 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-const filterLinks = [
-  {
-    category: "All",
-    path: "/blog",
-  },
-  {
-    category: "Front-end",
-    path: "/blogs/category/Front-end",
-  },
-  {
-    category: "Back-end",
-    path: "/blogs/category/Back-end",
-  },
-];
+import useFetchCategory from "./useFetchCategory";
 
 const Filter = ({ onFilterChange }) => {
+  const {
+    data: categories,
+    isPending,
+    error,
+  } = useFetchCategory("http://localhost:8000/category");
+
   return (
     <nav className="blog-filter">
+      {error && <div className="error">{error}</div>}
+      {isPending && <div className="load">Loading...</div>}
       <ul>
-        {filterLinks.map((link, index) => (
-          <li key={index}>
-            <Link to={link.path} onClick={() => onFilterChange(link.category)}>
-              {link.category}
-            </Link>
-          </li>
-        ))}
+        {categories && (
+          <>
+            <li key="all">
+              <Link to="/blog" onClick={() => onFilterChange("All")}>
+                All
+              </Link>
+            </li>
+
+            {categories.map((category) => (
+              <li key={category.id}>
+                <Link
+                  to={`/blogs/category/${category.title}`}
+                  onClick={() => onFilterChange(category.title)}
+                >
+                  {category.title}
+                </Link>
+              </li>
+            ))}
+          </>
+        )}
       </ul>
     </nav>
   );
