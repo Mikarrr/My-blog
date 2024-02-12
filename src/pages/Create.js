@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useFetchCategory from "../components/useFetchCategory";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -8,6 +9,12 @@ const Create = () => {
   const [author, setAuthor] = useState("");
   const [isPending, setIsPending] = useState(false);
   const history = useNavigate();
+  const {
+    data: categories,
+    isPending: categoriesPending,
+    error: categoriesError,
+  } = useFetchCategory("http://localhost:8000/category");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const blog = { title, body, author, category };
@@ -32,6 +39,8 @@ const Create = () => {
       <div className="create-list">
         <div className="create-form">
           <form onSubmit={handleSubmit}>
+            {categoriesError && <div>{categoriesError}</div>}
+            {categoriesPending && <div>Loading categories...</div>}
             <label>Blog title:</label>
             <input
               type="text"
@@ -50,8 +59,12 @@ const Create = () => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option value="Front-end">Front-end</option>
-              <option value="Back-end">Back-end</option>
+              {categories &&
+                categories.map((category) => (
+                  <option key={category.id} value={category.title}>
+                    {category.title}
+                  </option>
+                ))}
             </select>
             <label>Blog author:</label>
             <input
