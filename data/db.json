@@ -3,7 +3,7 @@
     {
       "title": "Securing Your Node.js Application: Best Practices for Authentication and Authorization",
       "body": "Security is a critical aspect of any Node.js application. In this blog post, we discuss best practices for implementing authentication and authorization to secure your Node.js applications against common vulnerabilities. Implementing robust authentication mechanisms, such as JSON Web Tokens (JWT) and OAuth, can help protect your application from unauthorized access and data breaches. Additionally, enforcing proper authorization rules ensures that users can only access resources they are authorized to, preventing potential security breaches and data leaks.",
-      "category": "Back-end",
+      "category": "Front-end",
       "author": "securityexpert",
       "id": "4"
     },

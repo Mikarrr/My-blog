@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useFetchCategory from "./useFetchCategory";
+import useFetchCategory from "../UseFetch/useFetchCategory";
 
 const EditForm = ({ initialData, onSubmit }) => {
   const [title, setTitle] = useState(initialData.title);

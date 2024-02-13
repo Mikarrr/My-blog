@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import useFetchBlog from "./useFetchBlog";
+import useFetchBlog from "../UseFetch/useFetchBlog";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import EditForm from "./EditForm";

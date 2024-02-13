@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import useFetchCategory from "./useFetchCategory";
+import useFetchCategory from "../UseFetch/useFetchCategory";
 
 const Filter = ({ onFilterChange }) => {
   const {

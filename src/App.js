@@ -9,7 +9,7 @@ import NotFound from "./components/NotFound";
 
 import Blog from "./pages/Blog";
 import Create from "./pages/Create";
-import BlogDetails from "./components/BlogDetails";
+import BlogDetails from "./components/Blog/BlogDetails";
 import CreateCategory from "./pages/CreateCategory";
 
 function App() {
