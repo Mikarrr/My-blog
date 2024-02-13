@@ -19,7 +19,7 @@ const UseFetchCreate = (url) => {
     e.preventDefault();
     const blog = { title, body, author, category };
 
-    fetch("http://localhost:8000/blogs", {
+    fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
